@@ -4,12 +4,15 @@
 		"noImplicitAny": true,
 		"module": "es6",
 		"target": "es5",
-		"jsx": "react",
+		"jsx": "react-jsx",
 		"allowJs": true,
 		"moduleResolution": "node",
-		"allowSyntheticDefaultImports": true, //для импортов без *
+		"allowSyntheticDefaultImports": true, // для импортов без *
 		"esModuleInterop": true, // вместо common js используем обычные импорты,
-		"baseUrl": "."
+		"baseUrl": ".", // абсолютные иморты
+		"paths": {
+			"*": ["./src/*"]
+		}
 	},
 	"ts-node": {
 		"compilerOptions": {

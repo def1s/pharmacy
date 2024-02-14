@@ -1,0 +1,30 @@
+.DrugDescription {
+
+}
+
+.content {
+    display: flex;
+}
+
+.cover {
+    width: 530px;
+    height: 350px;
+    img {
+        display: block; // need or not?
+        height: 100%;
+        margin: 0 auto;
+    }
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.cost {
+
+}
+
+.wrapper {
+
+}
