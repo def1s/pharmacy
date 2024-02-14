@@ -1,15 +1,14 @@
 import './styles/index.scss';
-import { Link } from 'react-router-dom';
 import AppRouter from 'app/providers/router/ui/AppRouter';
 import { classNames } from 'shared/lib/classNames/classNames';
+import { Header } from 'widgets/Header';
+
 
 const App = () => {
 	return (
 		<div className={classNames('app')}>
 			<div className="content">
-				<Link to={'/'}>Main</Link>
-				<Link to={'/medicine-catalog'}>To catalog</Link>
-				<Link to={'/medicine-catalog/3'}>To category</Link>
+				<Header/>
 				<AppRouter/>
 			</div>
 		</div>

@@ -25,7 +25,7 @@ export const DrugPage = ({ className }: DrugPageProps) => {
 	}, [drugId]);
 
 	return (
-		<div className={classNames(cls.DrugPage, {}, [className])}>
+		<div className={classNames(cls.DrugPage, {}, ['container'])}>
 			<DrugDescription data={drugDescription}/>
 		</div>
 	);

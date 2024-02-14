@@ -1,0 +1,23 @@
+.Header {
+    height: 70px;
+    width: 100%;
+    background-color: #f6143d;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.link {
+    color: #000000;
+    text-decoration: none;
+    font-size: 24px;
+    margin-left: 20px;
+    &:first-child {
+        margin-left: 0;
+    }
+}
+
+.wrapper {
+
+}

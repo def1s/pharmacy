@@ -1,31 +1,21 @@
 import cls from './DrugGrid.module.scss';
 import { classNames } from 'shared/lib/classNames/classNames';
-import { useDispatch, useSelector } from 'react-redux';
-import { useEffect } from 'react';
-import { useHttp } from 'shared/hooks/useHttpHook/useHttpHook';
-import { drugGridActions } from 'widgets/DrugGrid/model/slice/drugGridSlice';
-import { getDrugsList } from 'widgets/DrugGrid/model/selectors/getDrugsList/getDrugsList';
+import { useSelector } from 'react-redux';
 import { MedicineCard } from 'entities/MedicineCard';
 import { Spinner } from 'widgets/Spinner/ui/Spinner';
+import { getDrugsList } from '../model/selectors/getDrugsList/getDrugsList';
 
 interface DrugGridProps {
-    className?: string
+    className?: string;
+	loading: boolean;
 }
 
-export const DrugGrid = ({ className }: DrugGridProps) => {
-	const dispatch = useDispatch();
+export const DrugGrid = ({ className, loading }: DrugGridProps) => { // пока беру только loading
 	const drugsList = useSelector(getDrugsList);
-	const { request, loading } = useHttp(); // пока что не беру error
-
-	useEffect(() => {
-		request({ url: '/api/all-drugs' })
-			.then(res => dispatch(drugGridActions.fetchingDrugsList(res.data)))
-			.catch(error => console.log(error));
-	}, []);
 
 	const renderDrugsList = () => {
-		return drugsList.map(({ cover, title, cost }, index) => {
-			return <MedicineCard key={index} cover={cover} title={title} cost={cost}/>;
+		return drugsList.map(({ cover, title, cost, drug_id }, index) => {
+			return <MedicineCard key={index} cover={cover} title={title} cost={cost} drug_id={drug_id}/>;
 		});
 	};
 

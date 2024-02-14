@@ -1,9 +1,11 @@
 import { DrugGrid } from './ui/DrugGrid';
 import { drugGridReducer } from './model/slice/drugGridSlice';
-import type { drugGridSchema } from 'widgets/DrugGrid/model/types/drugGridSchema';
+import type { drugGridSchema } from './model/types/drugGridSchema';
+import { drugGridActions } from './model/slice/drugGridSlice';
 
 export {
 	DrugGrid,
 	drugGridReducer,
-	drugGridSchema
+	drugGridSchema,
+	drugGridActions
 };
