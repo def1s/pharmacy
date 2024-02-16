@@ -1,7 +1,7 @@
 .Header {
     height: 70px;
     width: 100%;
-    background-color: #f6143d;
+    background-color: rgb(245, 246, 252);
     position: fixed;
     top: 0;
     display: flex;
@@ -9,15 +9,39 @@
 }
 
 .link {
-    color: #000000;
     text-decoration: none;
-    font-size: 24px;
+    color: #4665d7;
+    font-size: 16px;
+    font-weight: 900;
+    line-height: 1;
     margin-left: 20px;
+    height: 100%;
+    transition: all .5s;
     &:first-child {
         margin-left: 0;
+    }
+    &:hover {
+        color: #0b2275;
     }
 }
 
 .wrapper {
+    margin-left: 40px;
+    display: flex;
+}
 
+.user {
+    position: absolute;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.cartIcon {
+    width: 35px;
+    height: 35px;
 }

@@ -7,7 +7,8 @@ export function buildDevServer (options: buildOptions): DevServerConfigurations 
 		open: true, // автоматически открывает в браузере страницу с приложением
 		historyApiFallback: true,
 		proxy: {
-			'/api': 'http://localhost:6060' // проксирование запросов от фронтенда к бекенду
+			'/api': 'http://localhost:6060', // проксирование запросов от фронтенда к бекенду
+			'/auth': 'http://localhost:6060'
 		}
 	};
 }

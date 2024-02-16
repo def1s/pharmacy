@@ -3,10 +3,24 @@
     //height: 510px;
     width: 100%;
     height: 100%;
-    padding: 0 12px 0 12px;
-    background-color: red;
+    padding: 12px;
+    //background-color: red;
+    background-color: #e8e5f3;
+    border-radius: 15px;
     text-decoration: none;
     color: #000000;
+
+    -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+    transition: all 0.5s;
+
+    &:hover {
+        scale: 1.03;
+        -webkit-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.4);
+        -moz-box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.4);
+        box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.4);
+    }
 
     &__cover {
         width: 100%;
@@ -21,11 +35,12 @@
         aspect-ratio: 1;
         overflow: hidden;
         transition: transform .2s ease-in-out;
-        background-image: url("https://f.stolichki.ru/s/drugs/medium/67/67255.jpg");
+        //background-image: url("https://f.stolichki.ru/s/drugs/medium/67/67255.jpg");
     }
 
     &__title {
-
+        font-size: 20px;
+        margin-top: 10px;
     }
 
     &__wrapper {
@@ -33,10 +48,8 @@
     }
 
     &__cost {
-
-    }
-
-    &__tempClass {
-
+        font-size: 18px;
+        text-align: right;
+        margin-top: 5px;
     }
 }

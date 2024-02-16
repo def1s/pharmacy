@@ -8,7 +8,7 @@ interface DrugDescriptionProps {
 }
 
 export const DrugDescription = ({ className, data }: DrugDescriptionProps) => {
-	const { cover, title, cost } = data;
+	const { cover, title, cost, description } = data;
 
 	return (
 		<div className={classNames(cls.DrugDescription, {}, [className])}>
@@ -19,7 +19,8 @@ export const DrugDescription = ({ className, data }: DrugDescriptionProps) => {
 
 				<div className={cls.wrapper}>
 					<div className={cls.title}>{title}</div>
-					<div className={cls.cost}>{cost}</div>
+					<div className={cls.cost}>Цена: {cost}₽</div>
+					<div className={cls.description}>Описание: <br/> {description}</div>
 				</div>
 			</div>
 		</div>

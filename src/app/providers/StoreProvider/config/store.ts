@@ -5,6 +5,8 @@ import { categoriesListReducer } from 'widgets/CategoriesList';
 import { drugDescriptionReducer } from 'entities/DrugDescription';
 import { userReducer } from 'entities/User';
 import { loginReducer } from 'features/AuthByUsername';
+import { cartListReducer } from 'widgets/CartList/model/slice/cartListSlice';
+import { myOrdersReducer } from 'pages/MyOrders';
 
 export function createReduxStore(initialState?: StateSchema) {
 	return configureStore<StateSchema>({
@@ -13,7 +15,9 @@ export function createReduxStore(initialState?: StateSchema) {
 			categories: categoriesListReducer,
 			drugDescription: drugDescriptionReducer,
 			user: userReducer,
-			login: loginReducer
+			login: loginReducer,
+			cart: cartListReducer,
+			orders: myOrdersReducer
 		},
 		devTools: true, // use global variables!
 		preloadedState: initialState

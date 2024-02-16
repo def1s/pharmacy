@@ -3,8 +3,10 @@ import { drugDescriptionSchema } from '../types/drugDescriptionSchema';
 
 const initialState: drugDescriptionSchema = {
 	cover: '',
-	cost: 0,
-	title: ''
+	cost: undefined,
+	title: '',
+	id: undefined,
+	description: ''
 };
 
 export const drugDescriptionSlice = createSlice({
@@ -15,6 +17,8 @@ export const drugDescriptionSlice = createSlice({
 			state.cover = action.payload.cover;
 			state.cost = action.payload.cost;
 			state.title = action.payload.title;
+			state.id = action.payload.drug_id;
+			state.description = action.payload.description;
 		}
 	}
 });

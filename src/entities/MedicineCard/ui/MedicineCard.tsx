@@ -15,14 +15,14 @@ export const MedicineCard = ({ className, cover, title, cost, drug_id }: Medicin
 	return (
 		<Link to={`/drugs/${drug_id}`} className={classNames(cls.MedicineCard, {}, [className])}>
 			<div className={cls.MedicineCard__cover}>
-				<div className={cls.MedicineCard__image} style={{ backgroundImage: cover }}></div> {/*исправить*/}
+				<div className={cls.MedicineCard__image} style={{ backgroundImage: `url(${cover})` }}></div> {/*исправить*/}
 			</div>
 
 			<div className={cls.MedicineCard__title}>{title}</div>
 
 			<div className={cls.MedicineCard__wrapper}>
-				<div className={cls.MedicineCard__cost}>{cost}</div>
-				<div className={cls.MedicineCard__tempClass}>BUY</div>
+				<div className={cls.MedicineCard__cost}>{cost}₽</div>
+				{/*<div className={cls.MedicineCard__tempClass}>BUY</div>*/}
 			</div>
 		</Link>
 	);
